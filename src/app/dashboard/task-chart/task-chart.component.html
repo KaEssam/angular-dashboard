@@ -1,0 +1,31 @@
+<div class="bg-white p-6 rounded-r-lg shadow-sm w-auto">
+  <div class="flex justify-between items-center">
+    <span class="text-2xl font-bold text-text2">Task Done</span>
+    <div class="flex space-x-4">
+      <button
+        class="text-xl font-semibold"
+        [class.text-text3]="currentRange === 'daily'"
+        (click)="setRange('daily')"
+      >
+        Daily
+      </button>
+      <button
+        class="text-xl font-semibold"
+        [class.text-text3]="currentRange === 'weekly'"
+        (click)="setRange('weekly')"
+      >
+        Weekly
+      </button>
+      <button
+        class="text-xl font-semibold"
+        [class.text-text3]="currentRange === 'monthly'"
+        (click)="setRange('monthly')"
+      >
+        Monthly
+      </button>
+    </div>
+  </div>
+  <div class="h-50 mt-4">
+    <p-chart type="line" [data]="data" />
+  </div>
+</div>

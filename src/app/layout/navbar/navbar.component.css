@@ -1,0 +1,38 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+app-navbar {
+  width: 100%;
+}
+
+.layout-content {
+  display: flex;
+  flex: 1;
+}
+
+.layout-sidebar {
+  width: 200px;
+  /* Adjust the width of the sidebar as needed */
+  flex-shrink: 0;
+}
+
+.layout-main-container {
+  flex: 1;
+  margin-left: 20px;
+  /* Space between sidebar and main content */
+}
+
+.layout-main {
+  padding: 10px;
+  /* Optional padding inside main container */
+}
